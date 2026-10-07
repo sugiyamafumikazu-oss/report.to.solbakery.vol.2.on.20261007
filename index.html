@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SOL BAKERY 打合せ報告（2026年10月7日）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --ink:#2b2219; --sub:#776b5e; --rule:#e7dfd2; --soft:#faf6ef;
+  --sun:#e3a21a; --sun-ink:#8a5d00; --leaf:#4f6a3a; --leaf-soft:#eef3e8; --warn:#9a3b1f; --warn-soft:#fbefe9;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1d1813; --ink:#efe7db; --sub:#b3a696; --rule:#3a3128; --soft:#26201a;
+    --sun:#f0b43a; --sun-ink:#f3c66b; --leaf:#9cbf7f; --leaf-soft:#25301d; --warn:#f09a7c; --warn-soft:#3a2219;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1d1813; --ink:#efe7db; --sub:#b3a696; --rule:#3a3128; --soft:#26201a;
+  --sun:#f0b43a; --sun-ink:#f3c66b; --leaf:#9cbf7f; --leaf-soft:#25301d; --warn:#f09a7c; --warn-soft:#3a2219;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  font-size:16px;line-height:1.85;-webkit-text-size-adjust:100%}
+.wrap{max-width:780px;margin:0 auto;padding:48px 22px 72px}
+h1,h2,h3{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;line-height:1.4;margin:0}
+header{border-bottom:3px solid var(--sun);padding-bottom:28px;margin-bottom:36px}
+.client{color:var(--sun-ink);font-weight:700;font-size:15px;margin:0 0 6px}
+h1{font-size:clamp(26px,5.5vw,36px);font-weight:800}
+.meta{margin:22px 0 0;display:grid;grid-template-columns:5.5em 1fr;gap:4px 14px;font-size:15px}
+.meta dt{color:var(--sub)}
+.meta dd{margin:0}
+h2{font-size:22px;font-weight:800;margin:52px 0 16px;padding-left:14px;border-left:5px solid var(--sun)}
+h3{font-size:17px;font-weight:600;margin:28px 0 8px}
+p{margin:0 0 12px}
+.lead{background:var(--soft);border-radius:6px;padding:20px 22px;margin:0}
+.lead p:last-child{margin:0}
+
+/* schedule */
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7.6em;top:8px;bottom:8px;width:2px;background:var(--rule)}
+.timeline li{display:grid;grid-template-columns:7em 1fr;gap:0 26px;padding:10px 0;position:relative}
+.timeline li::before{content:"";position:absolute;left:calc(7.6em - 5px);top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--sun)}
+.timeline li.done::before{background:var(--leaf);border-color:var(--leaf)}
+.timeline .d{font-weight:700;font-size:15px;white-space:nowrap}
+.timeline .t{font-size:15px}
+.timeline .t small{display:block;color:var(--sub);font-size:13.5px;line-height:1.6}
+
+/* decisions */
+.decide{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule)}
+.decide li{padding:14px 0 14px 30px;border-bottom:1px solid var(--rule);position:relative}
+.decide li::before{content:"";position:absolute;left:4px;top:23px;width:12px;height:7px;border-left:3px solid var(--leaf);border-bottom:3px solid var(--leaf);transform:rotate(-45deg)}
+.decide b{font-weight:700}
+
+/* actions */
+.actions{display:grid;gap:22px}
+.owner{border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.owner h3{margin:0;padding:12px 18px;background:var(--soft);font-size:16px;border-bottom:1px solid var(--rule)}
+.owner ul{list-style:none;margin:0;padding:6px 18px 10px}
+.owner li{padding:9px 0 9px 28px;position:relative;font-size:15px;border-bottom:1px dashed var(--rule)}
+.owner li:last-child{border-bottom:none}
+.owner li::before{content:"";position:absolute;left:0;top:14px;width:15px;height:15px;border:2px solid var(--sub);border-radius:3px}
+.owner li small{display:block;color:var(--sub);font-size:13.5px;line-height:1.6}
+
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:460px}
+th,td{border-bottom:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top}
+th{color:var(--sub);font-weight:500;width:9em;background:var(--soft)}
+
+.note{background:var(--warn-soft);border-left:4px solid var(--warn);padding:14px 18px;border-radius:0 6px 6px 0;font-size:15px}
+.note p:last-child{margin:0}
+.num{font-feature-settings:"tnum";white-space:nowrap}
+footer{margin-top:60px;padding-top:18px;border-top:1px solid var(--rule);color:var(--sub);font-size:13.5px}
+@media (max-width:520px){
+  .wrap{padding:32px 16px 56px}
+  .timeline::before{left:6.1em}
+  .timeline li{grid-template-columns:5.6em 1fr;gap:0 22px}
+  .timeline li::before{left:calc(6.1em - 5px)}
+  .meta{grid-template-columns:4.8em 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="client">株式会社SOL BAKERY 様</p>
+  <h1>新店舗の設備導入と<br>省力化補助金の手続きに関する打合せ報告</h1>
+  <dl class="meta">
+    <dt>日時</dt><dd>2026年10月7日（水）12:15〜</dd>
+    <dt>場所</dt><dd>SOL BAKERY 既存店舗</dd>
+    <dt>出席者</dt><dd>重冨 朋子 社長、川上 様（SOL BAKERY）<br>杉山 史和（補助金申請支援）</dd>
+  </dl>
+</header>
+
+<div class="lead">
+  <p>既存店舗の機械はすべて残し、新店舗に新しい機械を導入して、現在のパン製造工程を新店舗で再現しながら省力化する方針で、中小企業省力化投資補助金の手続きを進めます。新店舗の建築確認が遅れているため、事業所の変更手続きを至急行い、あわせて見積を約6,000万円から約4,500万円に組み直します。</p>
+</div>
+
+<h2>今後のスケジュール</h2>
+<ol class="timeline">
+  <li class="done"><span class="d">10月7日</span><span class="t">本打合せ<small>事業所変更と見積再編の方針を決定</small></span></li>
+  <li><span class="d">至急</span><span class="t">変更理由書・再編後の見積書をそろえ、交付申請と変更届を提出<small>提出前に事務局へ下書きを送って確認を受ける</small></span></li>
+  <li><span class="d">11月5日〜6日</span><span class="t">既存店舗にスキャナー・レジを導入</span></li>
+  <li><span class="d">12月15日</span><span class="t">既存店舗分の納品・支払いの期限<small>一部の品目は先方から順次納品</small></span></li>
+  <li><span class="d">12月16日</span><span class="t">既存店舗分の実績報告</span></li>
+  <li><span class="d">2027年4月頃</span><span class="t">新店舗オープン（目途）<small>機械の搬入後2週間〜1か月はオープンせず、この期間に検査員の確認を受ける</small></span></li>
+</ol>
+
+<h2>決定事項</h2>
+<ul class="decide">
+  <li><b>既存店舗の機械はすべて残置し、新店舗には新しい機械を導入する。</b>作業工程は現在と同じで、新しい機械が入ることで生産性を大きく高める内容として申請を組み立てる。見積の大半は新店舗に入る設備。</li>
+  <li><b>新店舗への事業所変更手続きを至急行う。</b>変更理由書と再編後の見積書がそろえば、交付申請と変更届を提出できる。交付決定が先に出れば、あとは建物の完成を待つだけになる。</li>
+  <li><b>見積を約4,500万円に組み直す。</b>大型機械に付属するテーブルやキャスター等の小物も一つずつラベル貼付・写真撮影が必要になるため、小物はできるだけ外し、計画書で省力化対象とした工程の設備に絞る。調整案はまず杉山が起案し、ご確認いただいたうえで機械会社に見積の作り直しを依頼する。</li>
+  <li><b>新店舗の機械搬入後のオープン前期間に検査を受ける。</b>来店客がいない時期に検査員に確認してもらう。</li>
+  <li><b>建築遅延でスケジュールがさらに延びる場合は、早めに共有いただき事務局と調整する。</b></li>
+</ul>
+
+<h2>確認した事項</h2>
+
+<h3>新店舗の建築確認</h3>
+<p>消防・保健所の承認はすでに出ていますが、建築確認のみ屋根の設置等について指摘が続いており、6月頃から協議中です。許可は当初予定より約3か月遅れており、まだ着工できていません。土地・建物とも会社所有です。建築会社には代金の一部を支払済みです。</p>
+
+<h3>機械の調達先（大村商会）</h3>
+<p>大村商会は大村様の個人事業です。大村様は以前勤めていた機械会社で既存店舗の機材を担当され、独立後も取引を続けています。重冨社長とは約20年のお付き合いがあり、新店舗の機械もすべて大村商会に依頼する意向です。インボイス登録番号は提出済みです。事務局から事業者の実態について照会を受けることがあるため、説明資料を用意して備えます。見積書の原案は杉山が作成してお示しします。</p>
+
+<h3>既存店舗の稼働状況</h3>
+<p>11時・12時の焼き上がりに合わせて昼前から行列ができます。12時に5〜6名が退勤して別のスタッフが出勤する入れ替え制で、製造スペースが足りず、働きたくても働ける場所がない状態です。18時閉店後は21時からご主人が製造し、深夜1〜2時から夜勤スタッフが入る、実質24時間稼働で生産を維持しています。新店舗の設備導入で、この空間的な制約の解消が見込まれます。</p>
+
+<h3>補助対象外にできる設備</h3>
+<p>事務局の担当者から、補助対象外にできそうな設備のリストアップ（約700万円分）をいただいています。見積を約4,500万円に組み直す際に、これらの設備を補助対象から外す方向で、杉山が整理してご提案します。</p>
+
+<h2>今後の対応</h2>
+<div class="actions">
+  <section class="owner">
+    <h3>SOL BAKERY 様にお願いしたいこと</h3>
+    <ul>
+      <li>建築工事請負契約書の写しのご提供<small>新店舗の計画が進んでいることを事務局に示すため</small></li>
+      <li>新店舗の土地・建物の登記簿謄本（新しい地番がわかるもの）のご提供</li>
+      <li>新店舗で取得済みの許認可関係書類のご提供</li>
+      <li>杉山の調整案をご確認のうえ、機械会社（大村商会）へ見積の作り直しのご依頼</li>
+      <li>建築スケジュールに変更があった際のご連絡</li>
+    </ul>
+  </section>
+  <section class="owner">
+    <h3>杉山が行うこと</h3>
+    <ul>
+      <li>変更理由書の作成</li>
+      <li>交付申請・変更届の作成と提出<small>提出前に事務局へ下書きを送付して確認</small></li>
+      <li>見積の調整案（約4,500万円）の起案<small>小物を外して省力化対象工程の設備に集約し、事務局がリストアップした補助対象外設備も整理</small></li>
+      <li>大村商会の事業者概要をまとめた説明資料の作成</li>
+      <li>既存店舗分の実績報告（12月16日）<small>納品・支払いの書類をいただき次第作業</small></li>
+    </ul>
+  </section>
+</div>
+
+<h2>支援報酬について</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>成功報酬</th><td>補助金額の20%。通常は採択時10%・入金時10%の2回払いのところ、初回のお取引のため、補助金入金後に20%を一括でご請求します。</td></tr>
+  <tr><th>契約書面</th><td>業務委託契約書は作成せず、請求書でのご対応とします（重冨社長ご了承済み）。</td></tr>
+</table>
+</div>
+
+<h2>留意事項</h2>
+<div class="note">
+  <p>補助事業の期限は、令和8年8月の採択から20か月以内（令和10年4月まで）です。新店舗のオープン目途（2027年4月頃）からは約1年の余裕がありますが、建築確認の遅れが長引くと全体の日程に影響するため、遅延の状況は早めに共有をお願いします。</p>
+</div>
+
+<footer>
+  作成：杉山 史和　／　2026年10月7日の打合せ内容をもとに作成
+</footer>
+
+</div>
+</body>
+</html>
